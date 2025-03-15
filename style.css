@@ -22,8 +22,8 @@ h1{
 }
 
 .choice:hover {
+    opacity: 0.5;
     cursor: pointer;
-    background-color: #081b31;
 }
 
 img{
@@ -31,4 +31,25 @@ img{
     width: 150px;
     object-fit: cover;
     border-radius: 50%;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 5rem;
+}
+
+.score-board{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-top: 3rem;
+    gap: 5rem;
+}
+
+#user-score, #comp-score{
+    
 }
