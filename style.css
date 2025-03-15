@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-align: center;
 }
 
 h1{
@@ -9,17 +10,20 @@ h1{
     color: #fff;
     height: 5rem;
     line-height: 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .choice{
     height: 165px;
     width: 165px;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.choice:hover {
+    cursor: pointer;
+    background-color: #081b31;
 }
 
 img{
