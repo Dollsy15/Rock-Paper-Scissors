@@ -51,5 +51,19 @@ img{
 }
 
 #user-score, #comp-score{
-    
+    font-size: 2.2rem;
+}
+
+.msg-container{
+    margin-top: 3rem;
+    margin-right: 40px;
+}
+
+#msg{
+    background-color: #081b31;
+    color: #fff;
+    font-size: 1.25rem;
+    display: inline;
+    padding: 1rem;
+    border-radius: 1rem;
 }
