@@ -8,11 +8,20 @@ const genComputerchoice = () => {
     const options = ["rock", "paper", "scissors"];
     const randIdx = Math.floor(Math.random() * 3);
     return options[randIdx];
-}
+};
 
 const drawGame = () =>{
     console.log("Game was draw")
-}
+};
+
+const showWinner = (userWin) => {
+    if(userWin) {
+        console.log("You win");
+    }
+    else{
+        console.log("You lose");
+    }
+};
 
 const playGame = () => {
     console.log("user choice = ", userChoice);
@@ -32,8 +41,14 @@ const playGame = () => {
             compChoice === "paper" ? false : true;
         } 
         else if(userChoice == "paper"){
-            
+            // rock, scissors
+            userWin = compChoice === "scissors" ? false : true;
         }
+        else{
+            // rock, paper
+            userWin = compChoice === "rock" ? false : true;
+        }
+        showWinner(userWin);
     }
 };
 
