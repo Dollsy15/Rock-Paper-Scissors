@@ -2,6 +2,7 @@ let userScore = 0;
 let compScore = 0;
 
 const choices = document.querySelectorAll(".choice");
+const msg = document.querySelector("#msg");
 
 const genComputerchoice = () => {
     // rock, paper, scissors
@@ -17,13 +18,15 @@ const drawGame = () =>{
 const showWinner = (userWin) => {
     if(userWin) {
         console.log("You win");
+        msg.innerText = "You win!";
     }
     else{
         console.log("You lose");
+        msg.innerText = "You lose.";
     }
 };
 
-const playGame = () => {
+const playGame = (userChoice) => {
     console.log("user choice = ", userChoice);
 
     // generate computer choice -> modular way of programming(reusable components)
@@ -56,7 +59,7 @@ choices.forEach((choice) => {
     choice.addEventListener("click", () => {
         const userChoice = choice.getAttribute("id");
         console.log("Choice was clicked", userChoice);
-        playGame();
+        playGame(userChoice);
     });
 });
 
