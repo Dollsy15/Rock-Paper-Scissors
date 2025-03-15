@@ -4,6 +4,9 @@ let compScore = 0;
 const choices = document.querySelectorAll(".choice");
 const msg = document.querySelector("#msg");
 
+const userScorePara = document.querySelector("#user-score");  
+const compScorePara = document.querySelector("#comp-score");
+
 const genComputerchoice = () => {
     // rock, paper, scissors
     const options = ["rock", "paper", "scissors"];
@@ -12,17 +15,25 @@ const genComputerchoice = () => {
 };
 
 const drawGame = () =>{
-    console.log("Game was draw")
+    // console.log("Game was draw");
+    msg.innerText = "Game was draw. Play again.";
+    msg.style.backgroundColor = "#081b31";
 };
 
-const showWinner = (userWin) => {
+const showWinner = (userWin, userChoice, compChoice) => {
     if(userWin) {
-        console.log("You win");
-        msg.innerText = "You win!";
+        // console.log("You win");
+        userScore++;
+        userScorePara.innerText = userScore;
+        msg.innerText = `You win! Your ${userChoice} beats ${compChoice}`;
+        msg.style.backgroundColor = "green";  
     }
     else{
-        console.log("You lose");
-        msg.innerText = "You lose.";
+        // console.log("You lose");
+        compScore++;
+        compScorePara.innerText = compScore;
+        msg.innerText = `You lose. ${compChoice} beats your ${userChoice}`;
+        msg.style.backgroundColor = "red";
     }
 };
 
@@ -51,7 +62,7 @@ const playGame = (userChoice) => {
             // rock, paper
             userWin = compChoice === "rock" ? false : true;
         }
-        showWinner(userWin);
+        showWinner(userWin, userChoice, compChoice);
     }
 };
 
