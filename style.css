@@ -75,8 +75,7 @@ img {
   font-size: 1rem;
   background-color: #081b31;
   color: #fff;
-  border: 2px solid #fff;
+  border: none;
   border-radius: 0.5rem;
   cursor: pointer;
-  transition: all 0.3s ease;
 }
