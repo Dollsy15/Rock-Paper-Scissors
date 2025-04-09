@@ -52,7 +52,7 @@ const playGame = (userChoice) => {
         let userWin = true;
         if(userChoice === "rock"){
             // scissors, paper
-            compChoice === "paper" ? false : true;
+            userWin = compChoice === "paper" ? false : true;
         } 
         else if(userChoice == "paper"){
             // rock, scissors
@@ -74,3 +74,13 @@ choices.forEach((choice) => {
     });
 });
 
+// reset button functionality
+const resetBtn = document.getElementById("reset-btn");
+resetBtn.addEventListener("click", () => {
+    userScore = 0;
+    compScore = 0;
+    userScorePara.innerText = userScore;
+    compScorePara.innerText = compScore;
+    msg.innerText = "Play your move";
+    msg.style.backgroundColor = "#081b31";
+});
