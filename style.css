@@ -57,24 +57,20 @@ img {
 
 .msg-container {
   margin-top: 3rem;
-  margin-right: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem; 
 }
 
-#msg {
-  background-color: #081b31;
-  color: #fff;
-  font-size: 1.25rem;
-  display: inline;
-  padding: 1rem;
-  border-radius: 1rem;
-}
-
+#msg,
 #reset-btn {
-  margin-top: 1rem;
   background-color: #081b31;
   color: #fff;
   font-size: 1.25rem;
-  display: inline;
-  padding: 1rem;
+  padding: 1rem 2rem;
   border-radius: 1rem;
+  display: inline-block;
+  text-align: center;
+  border: none;
 }
